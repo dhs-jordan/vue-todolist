@@ -5,14 +5,16 @@
 		<title>Todo List</title>
 	</head>
 	<body>
-		<form>
-			<input type="text" />
-			<input type="submit" value="submit" />
-		</form>
-		<ul>
-			<li v-for="index in todo">{{ index }}</li>
-		</ul>
+		<div id="app">
+			<form>
+				<input type="text" v-model="item" />
+				<input type="submit" value="submit" v-on:click="addItem()"/>
+			</form>
+			<ul>
+				<li v-for="index in todo">{{ index }}</li>
+			</ul>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="script.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	</body>
 </html>
